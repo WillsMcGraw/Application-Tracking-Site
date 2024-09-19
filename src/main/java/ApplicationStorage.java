@@ -37,8 +37,60 @@ public class ApplicationStorage<T>
       activeIndex++;
    }
 
-   public void quick_sort(Comparator<? super T> comparator)
+   /**
+    * A method to call helper methods to sort the application list according to the
+    * passed in comparator.
+    * @param comp
+    *    Comparator<Application>, represents the comparator that the list is being
+    *    sorted by
+    */
+   public void sort(Comparator<Application> comp)
    {
-      // TO DO
+      quickSort(this.applicationList, 0, this.activeIndex - 1, comp);
+   }
+
+   /**
+    * A private helper method to sort the application list.
+    * @param arr
+    * @param low
+    * @param high
+    * @param comp
+    * @return
+    */
+   private int partition(Application[] arr, int low, int high, Comparator<Application> comp)
+   {
+      Application pivotApplication = arr[high];
+      int i = low - 1;
+      for (int j = low; j < high; j++)
+      {
+         if (0 < comp.compare(arr[j], pivotApplication))
+         {
+            i++;
+            Application temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+         }
+      } 
+      Application temp = arr[i + 1];
+      arr[i + 1] = arr[high];
+      arr[high] = temp;
+      return (i + 1);
+   }
+
+   /**
+    * A private helper method to sort the application list.
+    * @param arr
+    * @param low
+    * @param high
+    * @param comp
+    */
+   private void quickSort(Application[] arr, int low, int high, Comparator<Application> comp)
+   {
+      if (low < high)
+      {
+         int pivot = partition(arr, low, high, comp);
+         quickSort(arr, low, pivot - 1, comp);
+         quickSort(arr, pivot + 1, high, comp);
+      }
    }
 }
