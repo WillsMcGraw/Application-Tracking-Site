@@ -1,6 +1,6 @@
 import junit.framework.*;
 
-public class DateTest
+public class TestDate
     extends TestCase
 {
     private Date test;
@@ -21,6 +21,26 @@ public class DateTest
         assertEquals(str, test.toString());
     }
 
+    public void testCompare()
+    {
+        Date earlyYear = new Date(2023, 9, 19);
+        Date lateYear = new Date(2025, 9, 19);
+        Date earlyMonth = new Date(2024, 8, 19);
+        Date lateMonth = new Date(2024, 10, 19);
+        Date earlyDay = new Date(2024, 9, 18);
+        Date lateDay = new Date(2024, 9, 20);
+        assertTrue(0 == test.compare(test));
+        assertTrue(0 > test.compare(earlyYear));
+        assertTrue(0 < test.compare(lateYear));
+        assertTrue(0 > test.compare(earlyMonth));
+        assertTrue(0 < test.compare(lateMonth));
+        assertTrue(0 > test.compare(earlyDay));
+        assertTrue(0 < test.compare(lateDay));
+    }
+
+    /**
+     * A test method for the equals() method of Date objects
+     */
     public void testEquals()
     {
         assertTrue(test.equals(test));

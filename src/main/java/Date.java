@@ -71,6 +71,32 @@ public class Date
     }
 
     /**
+     * A compare method to compare two Date objects.
+     * When calling date1.compare(date2), if a positive number is returned, then date1
+     * comes before date2. If a negative number is returned, date2 comes before date1.
+     * If 0 is returned, the dates are equal and are on the same day.
+     * @param other
+     *  Date, represents the date being compared to
+     * @return
+     *  int, positive if date1 comes before date2, negative if date2 comes before date1,
+     *  and 0 if the dates are on the same day.
+     */
+    public int compare(Date other)
+    {
+        if (this.equals(other))
+            return 0;
+        if (this.year == other.year)
+        {
+            if (this.month == other.month)
+            {
+                return other.day - this.day;
+            }
+            return other.month - this.month;
+        }
+        return other.year - this.year;
+    }
+
+    /**
      * An equals method that checks to see if two Date objects are equal.
      * They are considered to be equal if the year, month, and day of both objects are
      * the same.
