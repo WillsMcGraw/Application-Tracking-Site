@@ -1,6 +1,6 @@
 import java.util.Comparator;
 
-public class CompareCompanyName 
+public class CompareApplicationDate 
     implements Comparator<Application>
 {
     // Fields
@@ -21,8 +21,8 @@ public class CompareCompanyName
      */
     public int compare(Application leftApplication, Application rightApplication)
     {
-        String leftName = leftApplication.getCompanyName();
-        String rightName = rightApplication.getCompanyName();
-        return rightName.compareToIgnoreCase(leftName);
+        Date leftDate = leftApplication.getApplicationDate();
+        Date rightDate = rightApplication.getApplicationDate();
+        return leftDate.compare(rightDate);
     }
 }

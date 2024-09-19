@@ -1,6 +1,6 @@
 import junit.framework.*;
 
-public class TestDate
+public class DateTest
     extends TestCase
 {
     private Date test;

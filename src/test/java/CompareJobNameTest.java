@@ -1,10 +1,10 @@
 import junit.framework.*;
 
-public class TestCompareCompanyName 
+public class CompareJobNameTest 
     extends TestCase
 {
     // Fields
-    private CompareCompanyName comp;
+    private CompareJobName comp;
     private Application app1;
     private Application app2;
     private Application app3;
@@ -17,7 +17,7 @@ public class TestCompareCompanyName
      */
     public void setUp()
     {
-        comp = new CompareCompanyName();
+        comp = new CompareJobName();
         Date date1 = new Date(2024, 9, 19);
         Date date2 = new Date(2024, 10, 19);
         app1 = new Application(

@@ -1,6 +1,6 @@
 import java.util.Comparator;
 
-public class CompareCompanyName 
+public class CompareJobName 
     implements Comparator<Application>
 {
     // Fields
@@ -9,7 +9,7 @@ public class CompareCompanyName
 
     // Methods
     /**
-     * A method to compare the company name of two Application objects.
+     * A method to compare the job name of two Application objects.
      * @param leftApplication
      *  The application used on the left side of the function call
      * @param rightApplication
@@ -21,8 +21,8 @@ public class CompareCompanyName
      */
     public int compare(Application leftApplication, Application rightApplication)
     {
-        String leftName = leftApplication.getCompanyName();
-        String rightName = rightApplication.getCompanyName();
+        String leftName = leftApplication.getJobName();
+        String rightName = rightApplication.getJobName();
         return rightName.compareToIgnoreCase(leftName);
     }
 }
