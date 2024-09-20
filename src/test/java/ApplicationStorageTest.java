@@ -17,13 +17,13 @@ public class ApplicationStorageTest
     {
         applicationList = new ApplicationStorage(5);
         Application app1 = new Application("Company 1", "Fake Link", 
-            "Job 4", false, null, null);
+            "Job 4", null, null, null);
         Application app2 = new Application("Company 2", "Fake Link", 
-            "Job 3", false, null, null);
+            "Job 3", null, null, null);
         Application app3 = new Application("Company 3", "Fake Link", 
-            "Job 2", false, null, null);
+            "Job 2", null, null, null);
         Application app4 = new Application("Company 4", "Fake Link", 
-            "Job 1", false, null, null);
+            "Job 1", null, null, null);
         applicationList.record(app3);
         applicationList.record(app1);
         applicationList.record(app4);
@@ -44,9 +44,9 @@ public class ApplicationStorageTest
     {
         ApplicationStorage test = new ApplicationStorage(5);
         Application app1 = new Application("Company 1", "Fake Link", 
-            "Job 1", false, null, null);
+            "Job 1", null, null, null);
         Application app2 = new Application("Company 2", "Fake Link", 
-            "Job 1", false, null, null);
+            "Job 1", null, null, null);
         test.record(app1);
         test.record(app2);
         Application[] arr = test.getApplicationList();

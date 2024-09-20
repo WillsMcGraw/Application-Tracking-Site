@@ -4,7 +4,7 @@ public class Application
     private String companyName;
     private String companyLink;
     private String jobName;
-    private boolean jobType;
+    private String jobLink;
     private Date applicationDate;
     private Status applicationStatus;
 
@@ -15,17 +15,17 @@ public class Application
      * @param companyName
      * @param companyLink
      * @param jobName
-     * @param jobType
+     * @param jobLink
      * @param applicationDate
      * @param applicationStatus
      */
     public Application(String companyName, String companyLink, String jobName, 
-                       boolean jobType, Date applicationDate, Status applicationStatus) 
+                       String jobLink, Date applicationDate, Status applicationStatus) 
     {
         this.companyName = companyName;
         this.companyLink = companyLink;
         this.jobName = jobName;
-        this.jobType = jobType;
+        this.jobLink = jobLink;
         this.applicationDate = applicationDate;
         this.applicationStatus = applicationStatus;
     }
@@ -59,13 +59,12 @@ public class Application
     }
 
     /**
-     * A getter method for the jobName field.
-     * @return boolean, represents the job type, true for full-time position, 
-     *  false for internship
+     * A getter method for the jobLink field.
+     * @return String, represents the job link
      */
-    public boolean getJobType()
+    public String getJobLink()
     {
-        return this.jobType;
+        return this.jobLink;
     }
 
     /**

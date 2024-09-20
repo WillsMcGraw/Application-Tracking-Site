@@ -24,7 +24,7 @@ public class CompareCompanyNameTest
             "Company 1", 
             "Fake Link", 
             "Job 1", 
-            false, 
+            null, 
             date1, 
             null
         );
@@ -32,7 +32,7 @@ public class CompareCompanyNameTest
             "Company 2", 
             "Fake Link", 
             "Job 2", 
-            false, 
+            null, 
             date2, 
             null
         );
@@ -40,7 +40,7 @@ public class CompareCompanyNameTest
             "Company 1", 
             "Fake Link", 
             "Job 1", 
-            false, 
+            null, 
             date1, 
             null
         );
