@@ -1,6 +1,6 @@
 import java.util.Comparator;
 
-public class ApplicationStorage<T>
+public class ApplicationStorage
 {
    // Fields
    private Application[] applicationList;

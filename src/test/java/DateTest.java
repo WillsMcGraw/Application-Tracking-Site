@@ -3,7 +3,9 @@ import junit.framework.*;
 public class DateTest
     extends TestCase
 {
+    // Fields
     private Date test;
+
     /**
      * A set up method to be called before each test method.
      */
