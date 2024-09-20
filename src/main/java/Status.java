@@ -4,7 +4,7 @@
  */
 public enum Status
 {
-    PROCESSING,
+    IN_PROCESS,
     DENIED,
     ACCEPTED
 }
